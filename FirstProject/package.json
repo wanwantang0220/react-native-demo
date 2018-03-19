@@ -8,7 +8,17 @@
   },
   "dependencies": {
     "react": "16.3.0-alpha.1",
-    "react-native": "0.54.2"
+    "react-native": "0.54.2",
+    "react-native-code-push": "^5.3.2",
+    "react-native-navigationbar": "^0.4.5",
+    "react-native-render-html": "^3.9.0",
+    "react-native-tab-navigator": "^0.3.4",
+    "react-native-vector-icons": "^4.5.0",
+    "react-redux": "^5.0.7",
+    "redux": "^3.7.2",
+    "redux-persist": "^5.9.1",
+    "redux-thunk": "^2.2.0",
+    "underscore": "^1.8.3"
   },
   "devDependencies": {
     "babel-jest": "23.0.0-alpha.0",
