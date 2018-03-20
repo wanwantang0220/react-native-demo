@@ -9,12 +9,13 @@ const MainPage = TabNavigator({
         screen: HomePage,
         navigationOptions: {
             //默认参数
+            tabBarLabel: '首页',
         }
     },
     Mine: {
         screen: MinePage,
         navigationOptions: {
-            //
+            tabBarLabel: '我的',
         }
     }
 }, {
@@ -25,15 +26,15 @@ const MainPage = TabNavigator({
     tabBarOptions: {
         activeTintColor: '#0F9C00', // 文字和图片选中颜色
         inactiveTintColor: '#999', // 文字和图片默认颜色
-        showIcon: true, // android 默认不显示 icon, 需要设置为 true 才会显示
+        showIcon: false, // android 默认不显示 icon, 需要设置为 true 才会显示
         indicatorStyle: {height: 0}, // android 中TabBar下面会显示一条线，高度设为 0 后就不显示线了， 不知道还有没有其它方法隐藏？？？
         style: {
-            backgroundColor: '#444', // TabBar 背景色
-            height: 50
+            backgroundColor: '#FFFFFF', // TabBar 背景色
+            height: 45
         },
         labelStyle: {
-            fontSize: 12, // 文字大小,
-            marginTop: 0,
+            fontSize: 16, // 文字大小,
+            marginTop: 5,
         },
     },
 });
