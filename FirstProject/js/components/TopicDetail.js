@@ -9,7 +9,7 @@ import API from '../utils/API';
 import HTMLRenderers from '../utils/HTMLRenderers';
 import ReplyItem from "./ReplyItem";
 
-class TopicsDetail extends Component {
+class TopicDetail extends Component {
     constructor(props){
         super(props);
         this.state = {
@@ -74,5 +74,5 @@ function select(state) {
     };
 }
 
-export default connect(select)(TopicsDetail);
+export default connect(select)(TopicDetail);
 

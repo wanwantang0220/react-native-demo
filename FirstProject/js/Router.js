@@ -2,15 +2,17 @@ import { StackNavigator } from "react-navigation";
 import MainPage from './components/MainPage';
 import TopicDetail from './components/TopicDetail';
 
-const Routers = StackNavigator({
-    Main: {
-        title: 'MainPage',
+const TopicNavigator = StackNavigator({
+    TopicsView: {
         screen: MainPage,
+        navigationOptions: {
+            title: '首页'
+        }
     },
-    TopicDetail:{
-        title: 'TopicDetail',
+    TopicDetail: {
         screen: TopicDetail,
+        path: 'TopicDetail/:id'
     },
 });
 
-module.exports = Routers;
+module.exports = TopicNavigator;

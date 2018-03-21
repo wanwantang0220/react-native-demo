@@ -9,14 +9,14 @@ import {View} from 'react-native';
 import {createStore} from 'redux'
 import {Provider} from 'react-redux'
 import app from './js/reducer/Reducers'
-import MainPage from './js/components/MainPage';
+import SplashPage from './js/SplashPage';
 
 const store = createStore(app);
 
 const Container = () =>
     <Provider store={store}>
         <View style={{flex: 1}}>
-            <MainPage/>
+            <SplashPage />
         </View>
     </Provider>;
 
