@@ -1,2 +1,2 @@
 # react-native-demo
-react-native android demo
+FirstProject 是 react-native android demo  使用v2er的API
