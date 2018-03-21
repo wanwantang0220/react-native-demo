@@ -11,7 +11,10 @@ const TopicNavigator = StackNavigator({
     },
     TopicDetail: {
         screen: TopicDetail,
-        path: 'TopicDetail/:id'
+        path: 'TopicDetail/:id',
+        navigationOptions: {
+            title: '详情'
+        }
     },
 });
 
