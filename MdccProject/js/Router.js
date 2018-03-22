@@ -1,12 +1,12 @@
 import { StackNavigator } from "react-navigation";
-import TabNavigatorPage from './components/TabNavigatorPage';
+import TabNavigator from './TabNavigator';
 import MinePage from './components/MinePage';
 
 const TopicNavigator = StackNavigator({
     Main: {
-        screen: TabNavigatorPage,
+        screen: TabNavigator,
         navigationOptions: {
-            title: '首页'
+            // title: '日程安排'
         }
     },
     Mine: {

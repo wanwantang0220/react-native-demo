@@ -4,10 +4,19 @@ import {Text} from 'react-native'
 
 export default class MinePage extends  Component{
 
+
+    // static navigationOptions = {
+    //     title: '我的订阅',
+    //     headerTitleStyle: {
+    //         alignSelf: 'center'
+    //     },
+    // }
+
+
     render(){
 
         return(
-            <Text>MinePage</Text>
+            <Text>我的订阅</Text>
         )
     }
 }

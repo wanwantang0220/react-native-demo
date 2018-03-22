@@ -5,7 +5,7 @@
  */
 
 import React, {Component} from 'react';
-import {Platform, StatusBar, BackAndroid, View, Navigator,AsyncStorage} from 'react-native'
+import {Platform, StatusBar, BackAndroid,BackHandler , View, Navigator,AsyncStorage} from 'react-native'
 import reducers from './js/reducer/Reducer';
 import thunk from 'redux-thunk';
 import {Provider} from 'react-redux';
@@ -30,11 +30,11 @@ export const ABOVE_LOLIPOP = Platform.Version && Platform.Version > 19
 export default class App extends Component {
 
     componentDidMount() {
-        BackAndroid.addEventListener('hardwareBackPress', this.handleBack)
+        BackHandler.addEventListener('hardwareBackPress', this.handleBackAndroid)
     }
 
     componentWillMount() {
-        BackAndroid.removeEventListener('hardwareBackPress', this.handleBack)
+        BackHandler.removeEventListener('hardwareBackPress', this.handleBackAndroid)
     }
 
     render() {
@@ -43,7 +43,9 @@ export default class App extends Component {
                 <View style={{flex: 1}}>
                     <StatusBar
                         barStyle='light-content'
+                        backgroundColor='transparent'
                         style={{height: STATUS_BAR_HEIGHT}}
+                        translucent={ABOVE_LOLIPOP}
                     />
                     <SplashPage />
                 </View>
@@ -51,7 +53,7 @@ export default class App extends Component {
         );
     }
 
-    handleBack = () => {
+    handleBackAndroid = () => {
         const navigator = this.refs.navigator
         if (navigator && navigator.getCurrentRoutes().length > 1) {
             navigator.pop()

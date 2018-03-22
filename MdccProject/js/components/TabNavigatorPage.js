@@ -1,24 +1,33 @@
 import React from 'react';
+import {View }from 'react-native';
 import {TabNavigator} from 'react-navigation';
 import MainPage from './MainPage';
+import MinePage from './MinePage';
 
 const TabNavigatorPage = TabNavigator({
 
     Main: {
         screen: MainPage,
-        navigationOptions: {
-            //默认参数
-            tabBarLabel: '首页',
-            title: '首页'
-        }
+        // navigationOptions: {
+        //     //默认参数
+        //     tabBarLabel: '日程安排',
+        //     title: '日程安排',
+        //     headerTitleStyle: {
+        //         alignSelf: 'center'
+        //     },
+        //     headerRight:<View />
+        // }
     },
     Mine:{
-        screen: MainPage,
-        navigationOptions: {
-            //默认参数
-            tabBarLabel: '首页',
-            title: '首页'
-        }
+        screen: MinePage,
+        // navigationOptions: {
+        //     //默认参数
+        //     tabBarLabel: '我的订阅',
+        //     title: '我的订阅',
+        //     headerTitleStyle: {
+        //         alignSelf: 'center'
+        //     },
+        // }
     }
 }, {
     animationEnabled: true, // 切换页面时不显示动画
