@@ -1,21 +1,23 @@
 import React from 'react';
 import {TabNavigator} from 'react-navigation';
-import HomePage from './HomePage';
-import MinePage from './MinePage';
+import MainPage from './MainPage';
 
-const MainPage = TabNavigator({
+const TabNavigatorPage = TabNavigator({
 
-    Home: {
-        screen: HomePage,
+    Main: {
+        screen: MainPage,
         navigationOptions: {
             //默认参数
             tabBarLabel: '首页',
+            title: '首页'
         }
     },
-    Mine: {
-        screen: MinePage,
+    Mine:{
+        screen: MainPage,
         navigationOptions: {
-            tabBarLabel: '我的',
+            //默认参数
+            tabBarLabel: '首页',
+            title: '首页'
         }
     }
 }, {
@@ -39,5 +41,5 @@ const MainPage = TabNavigator({
     },
 });
 
-module.exports = MainPage;
+module.exports = TabNavigatorPage;
 
